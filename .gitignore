@@ -1,0 +1,41 @@
+
+# popular editor tmp files
+
+## Eclipse
+/.project
+/.settings
+/.buildpath
+
+## Sublime
+*.sublime-project
+*.sublime-workspace
+
+## Vim
+.*.sw[a-z]
+*.un~i
+tags
+
+# Other OS related tmp files
+
+## Windows
+Thumbs.db
+
+## OsX
+.DS_Store
+Icon?
+._*
+.Spotlight-V100
+.Trashes
+
+
+# NPM node_modules
+/node_modules
+
+# tmp files
+.tmp/
+
+# build files
+/build/*
+
+# config files
+/config/config.js
