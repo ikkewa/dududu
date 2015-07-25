@@ -36,6 +36,6 @@ Icon?
 
 # build files
 /build/*
-
+/dist/*
 # config files
 /config/config.js
