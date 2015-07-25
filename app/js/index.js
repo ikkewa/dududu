@@ -7,7 +7,7 @@ var Input = require('./input');
 
 domready(function() {
 
-  var url = '/assets/sand.mp3';
+  var url = 'assets/sand.mp3';
   var el = document.body;
   var ctx;
 
