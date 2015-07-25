@@ -1,0 +1,26 @@
+doctype html
+html
+  head
+    title DuDuDuDu
+    meta(charset="utf-8")
+    meta(name="viewport", content="width=device-width")
+
+    // build:css css/style.css
+    link(href='css/style.css', rel='stylesheet')
+    // endbuild
+
+    // build:remove
+    script(src='/js/devreload.js')
+    // endbuild
+
+  body
+    #container
+      p Touch and Move
+        br
+        small aka Dance with your phone
+
+      img(src="assets/dance.gif")
+
+    // build:js js/build.min.js
+    script(src='js/build.js')
+    // endbuild
