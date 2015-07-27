@@ -4,12 +4,16 @@ module.exports = ColorUI;
 var round = Math.round;
 var abs = Math.abs;
 
+/**
+ * Class to calculate the color if the screen
+ * based on the movement of the phone
+ *
+ * Also draws the color the given DOM element
+ *
+ * @param {Object} opts options
+ */
 function ColorUI(opts) {
   this.dom = opts.dom || document.body;
-  // velocity
-  this.vx = 0;
-  this.vy = 0;
-  this.vz = 0;
   // acceleration
   this.ax = 0;
   this.ay = 0;
@@ -17,11 +21,6 @@ function ColorUI(opts) {
   this.aa = 0;
   this.ab = 0;
   this.ag = 0;
-  // rotation
-  this.ra = 0;
-  this.rb = 0;
-  this.rg = 0;
-  this.rr = 0;
 }
 
 /**
