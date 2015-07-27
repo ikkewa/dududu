@@ -55,7 +55,8 @@ module.exports = {
   copyassets: {
     srcPath: [
       assetsPath + 'sounds/**/*',
-      assetsPath + 'images/dance.gif'
+      assetsPath + 'images/dance.gif',
+      assetsPath + 'images/phone.gif'
     ],
     buildPath: buildPath + 'assets/',
     distPath: distPath + 'assets/'
