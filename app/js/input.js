@@ -38,7 +38,7 @@ inherits(Input, EventEmitter);
  * @param {DeviceMotionEvent} e
  */
 Input.prototype.handleMotionEvent = function onDeviceMotion(e) {
-  var x = Math.abs((e.acceleration.x || 0).toFixed(1));
+  var x = Math.abs((e.acceleration && e.acceleration.x || 0).toFixed(1));
   if(Math.abs(this.lastGrav.x - x) > 3) {
     if(!this.isMoving) {
       this.isMoving = true;
