@@ -18,7 +18,11 @@ function Sound(opts) {
   this.muteRate = 0.000000001;
   this.playRate = 1;
 
-  this.gainNode = this.ctx.createGain();
+  if(this.ctx.createGain) {
+    this.gainNode = this.ctx.createGain();
+  } else {
+    this.gainNode = this.ctx.createGainNode(); // for old webkit version
+  }
   this.gainNode.gain.value = this.volume;
   this.gainNode.connect(this.ctx.destination);
 
@@ -73,6 +77,7 @@ Sound.prototype.createSource = function createSource(buf) {
   source.buffer = buf;
   source.connect(this.gainNode);
   source.loop = true;
+  source.looping = true; // for old webkit version
 
   return source;
 };
