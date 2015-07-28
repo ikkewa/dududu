@@ -15,9 +15,6 @@ var abs = Math.abs;
 function ColorUI(opts) {
   this.dom = opts.dom || document.body;
   // acceleration
-  this.ax = 0;
-  this.ay = 0;
-  this.az = 0;
   this.aa = 0;
   this.ab = 0;
   this.ag = 0;
@@ -31,12 +28,7 @@ function ColorUI(opts) {
  * @param {DeviceMotionEvent} e
  */
 ColorUI.prototype.handleMotionEvent = function handleEvent(e) {
-  var acc = e.accelerationIncludingGravity;
   var rr = e.rotationRate;
-  this.ax = round(abs(acc.x * 1));
-  this.ay = round(abs(acc.y * 1));
-  this.az = round(abs(acc.z * 1));
-
   if(rr !== null) {
     this.aa = round(rr.alpha);
     this.ab = round(rr.beta);
