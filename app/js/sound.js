@@ -79,6 +79,13 @@ Sound.prototype.createSource = function createSource(buf) {
   source.loop = true;
   source.looping = true; // for old webkit version
 
+  if(!source.start) {
+    source.start = source.noteOn;
+  }
+  if(!source.stop) {
+    source.stop = source.noteOff;
+  }
+
   return source;
 };
 
